@@ -1,0 +1,52 @@
+@use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
+
+.container {
+  background: $background-colour-darkest-transparent;
+  //   background: blue;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 0;
+
+  .navWrapper {
+    @include displayFlex;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1300px;
+
+    .navList {
+      @include displayFlex;
+
+      .navLogo {
+        font-size: 24px;
+      }
+
+      .navItem {
+        cursor: pointer;
+
+        &:not(:last-child):hover {
+          color: $hover-colour;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .left {
+      .navList {
+      }
+    }
+
+    .right {
+      .navList {
+        width: 400px;
+
+        .navResume {
+          background: $button-background-colour;
+          padding: 10px 13px;
+          border-radius: 13px;
+        }
+      }
+    }
+  }
+}
