@@ -12,7 +12,7 @@
     @include displayFlex;
     margin: 0 auto;
     width: 80%;
-    max-width: 1300px;
+    max-width: $max-width;
 
     .navList {
       @include displayFlex;

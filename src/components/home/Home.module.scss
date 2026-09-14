@@ -1,0 +1,106 @@
+@use "../../styles/abstracts/variables" as *;
+
+.container {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+
+  .left {
+    width: 600px;
+    .greeting {
+      color: $navbar-hover-colour-stronger;
+    }
+
+    .name {
+      font-size: 55px;
+      font-weight: bold;
+      padding-top: 25px;
+
+      display: block;
+      white-space: nowrap;
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+
+      span {
+        color: $navbar-hover-colour-stronger;
+      }
+    }
+    .title {
+      font-size: 25px;
+      color: $text-colour-darker;
+      padding-top: 10px;
+
+      display: block;
+      white-space: nowrap;
+      font-size: clamp(3.5rem, 8vw, 4.5rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+    }
+
+    .description {
+      color: $text-colour-darker;
+      padding-top: 25px;
+
+      width: 80%;
+      font-size: 20px;
+    }
+
+    .socials {
+      padding-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        div {
+          border: none;
+          padding: 15px;
+          width: 150px;
+          border-radius: 30px;
+          text-align: center;
+
+          &:first-child {
+            background: white;
+            color: black;
+            font-weight: 800;
+          }
+
+          &:last-child {
+            background: $navbar-hover-colour-strong;
+            color: white;
+            font-weight: 800;
+          }
+        }
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+        font-size: 30px;
+        color: $text-colour-darker;
+        .socialIcon {
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 400px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      border-radius: 30px;
+    }
+  }
+}

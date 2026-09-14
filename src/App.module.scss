@@ -1,0 +1,7 @@
+@use "./styles/abstracts/variables" as *;
+
+.main {
+  width: 80%;
+  max-width: $max-width;
+  margin: 0 auto;
+}

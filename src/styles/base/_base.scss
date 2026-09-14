@@ -1,15 +1,52 @@
 @use "../abstracts/variables" as *;
 
+// body {
+//   margin: 0;
+//   padding: 0;
+//   //   background: $body-background-colour;
+//   font-family: "Roboto", sans-serif;
+//   color: $text-colour;
+
+//   background-color: #080c14;
+// }
+
 body {
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  background: $body-background-colour;
+  color: #fff;
+  background-color: #000;
   font-family: "Roboto", sans-serif;
-  color: $text-colour;
+  background-image:
+    /* dark vignette — this must be first, so it sits on top */
+    radial-gradient(
+      ellipse 75% 65% at 50% 42%,
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 45%,
+      #000 100%
+    ),
+    /* subtle blue glow behind the hero */
+    radial-gradient(
+        ellipse 45% 35% at 50% 42%,
+        rgba(20, 55, 120, 0.16) 0%,
+        transparent 75%
+      ),
+    /* grid */ linear-gradient(rgba(80, 105, 150, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80, 105, 150, 0.08) 1px, transparent 1px);
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    2rem 2rem,
+    2rem 2rem;
+
+  background-attachment: fixed;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.social-icon {
 }
