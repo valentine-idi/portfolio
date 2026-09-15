@@ -1,0 +1,51 @@
+@use "../../styles/abstracts/mixins" as *;
+@use "../../styles/abstracts/variables" as *;
+
+.container {
+  background-color: #0b1929;
+
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: $max-width;
+
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 24px;
+      color: $navbar-hover-colour-strong;
+      font-weight: 800;
+      padding-bottom: 15px;
+    }
+
+    .body {
+      max-width: 360px;
+
+      color: #9aa8c0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .icons {
+      text-align: right;
+    }
+
+    .socialIcon {
+      color: #9aa8c0;
+      font-size: 20px;
+      margin-left: 15px;
+      vertical-align: middle;
+    }
+
+    .copyright {
+      color: #9aa8c0;
+      font-size: 14px;
+      font-weight: 400;
+
+      padding-top: 15px;
+    }
+  }
+}

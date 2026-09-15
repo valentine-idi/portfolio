@@ -2,14 +2,14 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .container {
-  width: 80%;
-  margin: 0 auto;
-  //   padding-block: clamp(64px, 8vw, 112px);
+  @include container;
+  padding-bottom: 112px;
   .header {
-    font-size: clamp(3.5rem, 8vw, 4.5rem);
-    font-weight: 800;
-    line-height: 0.9;
-    text-align: center;
+    @include header;
+  }
+
+  .header::after {
+    @include headerAfter;
   }
 
   .summary {

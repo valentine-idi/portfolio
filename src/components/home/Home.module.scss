@@ -1,11 +1,14 @@
 @use "../../styles/abstracts/variables" as *;
+@use "../../styles/abstracts/mixins" as *;
 
 .container {
   min-height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 100px;
+  @include container;
 
   .left {
     width: 600px;

@@ -1,6 +1,8 @@
 import { NavBar } from "./components/navbar";
 import { Home } from "./components/home";
 import { About } from "./components/about";
+import { Skills } from "./components/skills";
+import { Footer } from "./components/footer";
 import styles from "./App.module.scss";
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
       <div className={styles.main}>
         <Home />
         <About />
+        <Skills />
       </div>
+      <Footer />
     </>
   );
 }
