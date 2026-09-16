@@ -3,6 +3,7 @@ import { Home } from "./components/home";
 import { About } from "./components/about";
 import { Skills } from "./components/skills";
 import { Footer } from "./components/footer";
+import { GetInTouch } from "./components/getInTouch";
 import styles from "./App.module.scss";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Home />
         <About />
         <Skills />
+        <GetInTouch />
       </div>
       <Footer />
     </>

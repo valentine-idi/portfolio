@@ -1,12 +1,15 @@
+@use "./variables" as *;
+
 @mixin displayFlex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-@mixin flex {
+@mixin flex($gap: 20px) {
   display: flex;
   justify-content: space-between;
+  gap: $gap;
 }
 
 @mixin header {
@@ -14,17 +17,17 @@
   margin: 0;
   padding-bottom: 14px;
 
-  font-size: clamp(48px, 2vw, 72px);
+  font-size: clamp(30px, 2vw, 45px);
   font-weight: 800;
   line-height: 0.9;
-  text-align: center;
+  text-align: left;
 }
 
-@mixin headerAfter($left: 406px) {
+@mixin headerAfter($left: 0, $width: 80px) {
   position: absolute;
   bottom: 0;
   left: $left;
-  width: 80px;
+  width: $width;
   height: 6px;
   border-radius: 999px;
   content: "";
@@ -34,4 +37,15 @@
 @mixin container {
   width: 95%;
   margin: 0 auto;
+}
+
+@mixin description {
+  color: $text-colour-darker;
+  padding: 50px 0;
+  text-align: left;
+  width: 55%;
+}
+
+@mixin border {
+  border: 1px solid #202c40;
 }

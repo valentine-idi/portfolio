@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.copyright}>
-            © 2026 Valentine Idi | Built with React and SCss
+            © 2026 Valentine Idi | Built with React and SCSS
           </div>
         </div>
       </div>

@@ -9,14 +9,11 @@
   }
 
   .header::after {
-    @include headerAfter;
+    @include headerAfter($width: 48px);
   }
 
   .summary {
-    color: $text-colour-darker;
-    text-align: center;
-    font-size: $text-font-size;
-    padding: 10px 0;
+    @include description;
   }
 
   .aboutContainer {
