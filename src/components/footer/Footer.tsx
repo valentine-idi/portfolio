@@ -1,8 +1,10 @@
-import { IconContext } from "react-icons";
+import { type IconType } from "react-icons";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import Icon from "../Icon";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
+  const icons: IconType[] = [FiGithub, FiLinkedin, FiMail];
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -15,27 +17,11 @@ const Footer = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.icons}>
-            <span>
-              <IconContext.Provider
-                value={{ className: `${styles.socialIcon}` }}
-              >
-                <FiGithub />
-              </IconContext.Provider>
-            </span>
-            <span>
-              <IconContext.Provider
-                value={{ className: `${styles.socialIcon}` }}
-              >
-                <FiLinkedin />
-              </IconContext.Provider>
-            </span>
-            <span>
-              <IconContext.Provider
-                value={{ className: `${styles.socialIcon}` }}
-              >
-                <FiMail />
-              </IconContext.Provider>
-            </span>
+            {icons.map((icon) => (
+              <span>
+                <Icon className={styles.socialIcon} icon={icon} />
+              </span>
+            ))}
           </div>
 
           <div className={styles.copyright}>

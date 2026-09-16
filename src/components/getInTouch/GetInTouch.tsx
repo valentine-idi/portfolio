@@ -1,27 +1,33 @@
-import { IconContext } from "react-icons";
+import { IconContext, type IconType } from "react-icons";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
 import { RiPhoneLine } from "react-icons/ri";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import styles from "./GetInTouch.module.scss";
 
+interface Contacts {
+  name: string;
+  value: string;
+  icon: IconType;
+}
+
 const GetInTouch = () => {
-  const contacts = [
+  const contacts: Contacts[] = [
     {
       name: "Email",
       value: "idi.valentine@gmail.com",
-      icon: <MdOutlineMail />,
+      icon: MdOutlineMail,
     },
 
     {
       name: "Phone",
       value: "+358 40 684 2464",
-      icon: <RiPhoneLine />,
+      icon: RiPhoneLine,
     },
 
     {
       name: "Location",
       value: "Helsinki, Finland",
-      icon: <MdOutlineLocationOn />,
+      icon: MdOutlineLocationOn,
     },
   ];
 
@@ -41,9 +47,11 @@ const GetInTouch = () => {
           </div>
 
           <div className={styles.contactWrapper}>
-            {contacts.map(({ name, value, icon }) => (
+            {contacts.map(({ name, value, icon: Icon }) => (
               <div className={styles.contactGroup}>
-                <div className={styles.contactLeft}>{icon}</div>
+                <div className={styles.contactLeft}>
+                  <Icon />
+                </div>
                 <div className={styles.contactRight}>
                   <div>{name}</div>
                   <div>{value}</div>

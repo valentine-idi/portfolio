@@ -38,6 +38,13 @@
       font-size: 20px;
       margin-left: 15px;
       vertical-align: middle;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        color: #3b82f6;
+        transform: scale(1.2);
+      }
     }
 
     .copyright {
