@@ -14,33 +14,33 @@ const Skills = () => {
     {
       title: "Programming Languages",
       tags: ["Javascript", "Python", "Typescript", "C#", "HTML/CSS"],
-      icon: <LuTerminal />,
+      icon: LuTerminal,
     },
     {
       title: "Frontend Development",
       tags: ["React", "Vue", "Angular", "Tailwind CSS", "React Native"],
-      icon: <LuPanelsTopLeft />,
+      icon: LuPanelsTopLeft,
     },
     {
       title: "Backend Development",
       tags: ["Node", "NestJs", "Express"],
-      icon: <LuCode />,
+      icon: LuCode,
     },
     {
       title: "Databases",
       tags: ["MongoDB", "MySQL", "Firebase", "PostgreSQL"],
-      icon: <LuDatabase />,
+      icon: LuDatabase,
     },
 
     {
       title: "Tools and Technologies",
       tags: ["Git", "Agile/Scrum", "BitBucket", "Vercel"],
-      icon: <LuCpu />,
+      icon: LuCpu,
     },
     {
       title: "Design",
       tags: ["Figma", "Adobe AI"],
-      icon: <LuPalette />,
+      icon: LuPalette,
     },
   ];
   return (
@@ -52,12 +52,12 @@ const Skills = () => {
       </div>
 
       <div className={styles.skills}>
-        {skills.map(({ title, tags, icon }) => (
+        {skills.map(({ title, tags, icon: Icon }) => (
           <div className={styles.gridWrapper}>
             <div className={styles.skillHeader}>
               <span>
                 <IconContext.Provider value={{ className: `${styles.icons}` }}>
-                  {icon}
+                  <Icon />
                 </IconContext.Provider>
               </span>
               <span>{title}</span>

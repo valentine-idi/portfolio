@@ -1,0 +1,18 @@
+{
+  "contacts": [
+    {
+      "url": "https://github.com/valentine-idi",
+      "icon": "FiGithub"
+    },
+
+    {
+      "url": "https://www.linkedin.com/in/valentine-idi/",
+      "icon": "FiLinkedin"
+    },
+
+    {
+      "url": "mailto:idi.valentine@gmail.com",
+      "icon": "FiMail"
+    }
+  ]
+}
