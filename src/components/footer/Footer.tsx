@@ -1,16 +1,7 @@
-import { type IconType } from "react-icons";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import { contacts } from "../../data/resources.json";
-import Icon from "../Icon";
+import IconLinks from "../iconLinks";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const icons: Record<string, IconType> = {
-    FiGithub,
-    FiLinkedin,
-    FiMail,
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -23,17 +14,7 @@ const Footer = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.icons}>
-            {contacts.map(({ url, icon }) => {
-              const IconComponent = icons[icon];
-
-              return (
-                <span key={url}>
-                  <a href={url} target="_blank" rel="noopener noreferrer">
-                    <Icon className={styles.socialIcon} icon={IconComponent} />
-                  </a>
-                </span>
-              );
-            })}
+            <IconLinks className={styles.socialIcon} />
           </div>
 
           <div className={styles.copyright}>

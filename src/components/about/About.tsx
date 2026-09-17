@@ -1,45 +1,9 @@
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
-import { IconContext } from "react-icons";
+import Icon from "../Icon";
+import { experience, tags } from "../../data/resources.json";
 import styles from "./About.module.scss";
 
 const About = () => {
-  const tags = [
-    "Passion for tech",
-    "learner",
-    "linux enthusiast",
-    "full stack developer",
-  ];
-
-  const experience = [
-    {
-      title: "Software Development Engineer",
-      company: "Elekta Oy",
-      started: "May 2022",
-      ended: "",
-    },
-
-    {
-      title: "Frontend Engineer",
-      company: "Druid Oy",
-      started: "March 2022",
-      ended: "April 2022",
-    },
-
-    {
-      title: "Full Stack Developer",
-      company: "DroppX",
-      started: "November 2020",
-      ended: "Feb 2022",
-    },
-
-    {
-      title: "Full Stack Developer",
-      company: "Globuzzer",
-      started: "September 2020",
-      ended: "November 2020",
-    },
-  ];
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>About Me</div>
@@ -49,11 +13,11 @@ const About = () => {
 
       <div className={styles.aboutContainer}>
         <div className={styles.left}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since 1966, when designers at Letraset and James Mosley, the librarian
-          at St Bride Printing Library in London, took a 1914 Cicero translation
-          and scrambled it to make dummy text for Letraset's Body Type sheets
+          Fullstack Engineer with 5+ years of experience building reliable,
+          scalable web applications across both frontend and backend.
+          Experienced with TypeScript, React, Angular, Vue, Node.js, C#, and
+          Python, with a strong focus on writing clean, maintainable code and
+          solving real-world problems.
         </div>
         <div className={styles.right}>
           {tags.map((tag) => (
@@ -70,11 +34,7 @@ const About = () => {
             <div className={styles.experienceContentHeader}>
               <div className={styles.border}>
                 <span>
-                  <IconContext.Provider
-                    value={{ className: `${styles.icons}` }}
-                  >
-                    <MdOutlineSchool />
-                  </IconContext.Provider>
+                  <Icon className={styles.icons} icon={MdOutlineSchool} />
                 </span>
                 <span>Education</span>
               </div>
@@ -101,7 +61,9 @@ const About = () => {
                 <div className={styles.listItemHeader}>Relevant focus</div>
 
                 <div className={styles.listItemBody}>
-                  Full-stack development, software engineering
+                  Communication Systems, Embedded Systems, Design,Digital System
+                  Design, Data Structures and Algorithms, Microprocessors and
+                  Microcontrollers
                 </div>
               </div>
             </div>
@@ -111,11 +73,7 @@ const About = () => {
             <div className={styles.experienceContentHeader}>
               <div className={styles.border}>
                 <span>
-                  <IconContext.Provider
-                    value={{ className: `${styles.icons}` }}
-                  >
-                    <MdWorkOutline />
-                  </IconContext.Provider>
+                  <Icon className={styles.icons} icon={MdWorkOutline} />
                 </span>
                 <span>Experience</span>
               </div>

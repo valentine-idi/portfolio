@@ -8,7 +8,6 @@
     width: 65%;
     margin: 0 auto;
     padding: 50px 0;
-    max-width: $max-width;
 
     display: flex;
     justify-content: space-between;
@@ -21,7 +20,7 @@
     }
 
     .body {
-      max-width: 360px;
+      width: 360px;
 
       color: #9aa8c0;
       font-size: 16px;
@@ -53,6 +52,35 @@
       font-weight: 400;
 
       padding-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    .wrapper {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 763px) {
+  .container {
+    .wrapper {
+      display: block;
+      text-align: center;
+      width: 90%;
+
+      .body {
+        width: 430px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .icons {
+        padding-top: 12px;
+        text-align: center;
+      }
     }
   }
 }

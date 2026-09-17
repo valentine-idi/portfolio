@@ -1,7 +1,6 @@
-import { IconContext } from "react-icons";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import IconLinks from "../IconLinks";
+import DeveloperCard from "../developer/DeveloperCard";
 import styles from "./Home.module.scss";
-import myImage from "../../assets/images/myPicture-black-and-white.jpg";
 
 const Home = () => {
   return (
@@ -27,23 +26,13 @@ const Home = () => {
             <div>View Skills</div>
           </div>
           <div className={styles.icons}>
-            <IconContext.Provider value={{ className: `${styles.socialIcon}` }}>
-              <FiGithub />
-            </IconContext.Provider>
-
-            <IconContext.Provider value={{ className: `${styles.socialIcon}` }}>
-              <FiLinkedin />
-            </IconContext.Provider>
-
-            <IconContext.Provider value={{ className: `${styles.socialIcon}` }}>
-              <FiMail />
-            </IconContext.Provider>
+            <IconLinks className={styles.socialIcon} />
           </div>
         </div>
       </div>
 
       <div className={styles.right}>
-        <img src={myImage} alt="My Picture" />
+        <DeveloperCard />
       </div>
     </div>
   );

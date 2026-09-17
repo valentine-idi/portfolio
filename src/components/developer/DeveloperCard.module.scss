@@ -1,0 +1,100 @@
+.codeCard {
+  width: 100%;
+  padding: 24px 26px;
+
+  background: #0d101f;
+  border: 2px solid #202943;
+  border-radius: 17px;
+
+  box-shadow:
+    0 0 0 1px rgba(45, 106, 180, 0.12),
+    0 0 25px rgba(27, 90, 160, 0.15);
+
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+
+  .codeCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+}
+
+.trafficLights {
+  display: flex;
+  gap: 9px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &.dotRed {
+    background: #ff4f50;
+  }
+
+  &.dotYellow {
+    background: #f5bd18;
+  }
+
+  &.dotGreen {
+    background: #20c56a;
+  }
+}
+
+.filename {
+  color: #747b91;
+  font-size: 12px;
+}
+
+// Code styling
+
+.code {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 600;
+  white-space: pre;
+}
+
+.comment {
+  color: #6c7385;
+}
+
+.keyword {
+  color: #ff2b87;
+}
+
+.variable {
+  color: #42d878;
+}
+
+.property {
+  color: #ad4cff;
+}
+
+.string {
+  color: #27d76b;
+}
+
+.operator {
+  color: #e4a4a8;
+}
+
+.bracket {
+  color: #f0a04b;
+}
+
+// Responsive
+
+// @media (max-width: 500px) {
+//   .codeCard {
+//     width: 100%;
+//     padding: 20px;
+//   }
+
+//   .code {
+//     font-size: 11px;
+//   }
+// }

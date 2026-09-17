@@ -1,7 +1,7 @@
 import { IconContext, type IconType } from "react-icons";
 
 interface Props {
-  className: string;
+  className?: string;
   icon: IconType;
 }
 

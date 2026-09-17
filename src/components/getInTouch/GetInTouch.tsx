@@ -1,35 +1,16 @@
-import { IconContext, type IconType } from "react-icons";
+import { type IconType } from "react-icons";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
 import { RiPhoneLine } from "react-icons/ri";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import IconLinks from "../iconLinks";
+import { contacts } from "../../data/resources.json";
 import styles from "./GetInTouch.module.scss";
 
-interface Contacts {
-  name: string;
-  value: string;
-  icon: IconType;
-}
-
 const GetInTouch = () => {
-  const contacts: Contacts[] = [
-    {
-      name: "Email",
-      value: "idi.valentine@gmail.com",
-      icon: MdOutlineMail,
-    },
-
-    {
-      name: "Phone",
-      value: "+358 40 684 2464",
-      icon: RiPhoneLine,
-    },
-
-    {
-      name: "Location",
-      value: "Helsinki, Finland",
-      icon: MdOutlineLocationOn,
-    },
-  ];
+  const icons: Record<string, IconType> = {
+    MdOutlineMail,
+    RiPhoneLine,
+    MdOutlineLocationOn,
+  };
 
   return (
     <div className={styles.container}>
@@ -47,34 +28,25 @@ const GetInTouch = () => {
           </div>
 
           <div className={styles.contactWrapper}>
-            {contacts.map(({ name, value, icon: Icon }) => (
-              <div className={styles.contactGroup}>
-                <div className={styles.contactLeft}>
-                  <Icon />
+            {contacts.map(({ name, value, icon }) => {
+              const IconComponent = icons[icon];
+              return (
+                <div className={styles.contactGroup}>
+                  <div className={styles.contactLeft}>
+                    <IconComponent />
+                  </div>
+                  <div className={styles.contactRight}>
+                    <div>{name}</div>
+                    <div>{value}</div>
+                  </div>
                 </div>
-                <div className={styles.contactRight}>
-                  <div>{name}</div>
-                  <div>{value}</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className={styles.connect}>Connect with me</div>
           <div className={styles.iconGroup}>
-            <span>
-              <IconContext.Provider
-                value={{ className: `${styles.connectIcons}` }}
-              >
-                <FiGithub />
-              </IconContext.Provider>
-            </span>
-            <span>
-              <FiLinkedin />
-            </span>
-            <span>
-              <FiMail />
-            </span>
+            <IconLinks />
           </div>
         </div>
 

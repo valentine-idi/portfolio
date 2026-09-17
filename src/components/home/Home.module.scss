@@ -2,16 +2,18 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .container {
-  min-height: calc(100vh - 100px);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 100px;
-  @include container;
+  padding: 542px 0;
+  gap: 30px;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
 
   .left {
-    width: 600px;
+    flex-basis: 60%;
+
     .greeting {
       color: $navbar-hover-colour-stronger;
     }
@@ -21,9 +23,7 @@
       font-weight: bold;
       padding-top: 25px;
 
-      display: block;
-      white-space: nowrap;
-      font-size: clamp(3.5rem, 8vw, 6rem);
+      font-size: clamp(30px, 4vw, 70px);
       font-weight: 800;
       line-height: 0.9;
       letter-spacing: -0.06em;
@@ -37,10 +37,8 @@
       color: $text-colour-darker;
       padding-top: 10px;
 
-      display: block;
-      white-space: nowrap;
-      font-size: clamp(3.5rem, 8vw, 4.5rem);
-      font-weight: 800;
+      font-size: clamp(30px, 2vw, 45px);
+      font-weight: 400;
       line-height: 0.9;
       letter-spacing: -0.06em;
     }
@@ -49,15 +47,13 @@
       color: $text-colour-darker;
       padding-top: 25px;
 
-      width: 80%;
-      font-size: 20px;
+      font-size: 17px;
     }
 
     .socials {
       padding-top: 15px;
       display: flex;
       justify-content: space-between;
-      width: 90%;
 
       .buttons {
         display: flex;
@@ -66,21 +62,21 @@
 
         div {
           border: none;
-          padding: 15px;
-          width: 150px;
-          border-radius: 30px;
+          padding: 12px 15px;
+          cursor: pointer;
+          border-radius: 10px;
           text-align: center;
 
           &:first-child {
-            background: white;
-            color: black;
-            font-weight: 800;
+            border: 1px solid #3b82f6;
+            background: #3b82f6;
+            color: #07111f;
           }
 
           &:last-child {
-            background: $navbar-hover-colour-strong;
-            color: white;
-            font-weight: 800;
+            border: 1px solid #273754;
+            background: transparent;
+            color: #f5f7ff;
           }
         }
       }
@@ -90,20 +86,84 @@
         justify-content: space-between;
         align-items: center;
         width: 120px;
-        font-size: 30px;
-        color: $text-colour-darker;
+
         .socialIcon {
+          font-size: 24px;
+          color: $text-colour-darker;
+
+          &:hover {
+            color: #3b82f6;
+            transform: scale(1.2);
+          }
         }
       }
     }
   }
 
   .right {
-    width: 400px;
-    flex-shrink: 0;
+    flex-basis: 40%;
     img {
       width: 100%;
       border-radius: 30px;
+    }
+  }
+}
+
+@media (max-width: 1623px) {
+  .container {
+    padding: 540px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: block;
+    padding: 410px 0;
+
+    .left,
+    .right {
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .right {
+      padding-top: 26px;
+    }
+  }
+}
+
+@media (max-width: 625px) {
+  .container {
+    padding: 406px 0;
+    .left,
+    .right {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 535px) {
+  .container {
+    padding: 398px 0;
+  }
+}
+
+@media (max-width: 444px) {
+  .container {
+    padding: 354px 0;
+    .left {
+      .socials {
+        display: block;
+
+        .buttons {
+          justify-content: center;
+        }
+
+        .icons {
+          margin: 20px auto;
+        }
+      }
     }
   }
 }

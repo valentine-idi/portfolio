@@ -1,5 +1,5 @@
 {
-  "contacts": [
+  "links": [
     {
       "url": "https://github.com/valentine-idi",
       "icon": "FiGithub"
@@ -14,5 +14,97 @@
       "url": "mailto:idi.valentine@gmail.com",
       "icon": "FiMail"
     }
+  ],
+
+  "contacts": [
+    {
+      "name": "Email",
+      "value": "idi.valentine@gmail.com",
+      "icon": "MdOutlineMail"
+    },
+
+    {
+      "name": "Phone",
+      "value": "+358 40 684 2464",
+      "icon": "RiPhoneLine"
+    },
+
+    {
+      "name": "Location",
+      "value": "Helsinki, Finland",
+      "icon": "MdOutlineLocationOn"
+    }
+  ],
+
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "tags": ["Javascript", "Python", "Typescript", "C#", "HTML/CSS"],
+      "icon": "LuTerminal"
+    },
+    {
+      "title": "Frontend Development",
+      "tags": ["React", "Vue", "Angular", "Tailwind CSS", "React Native"],
+      "icon": "LuPanelsTopLeft"
+    },
+    {
+      "title": "Backend Development",
+      "tags": ["Node", "NestJs", "Express"],
+      "icon": "LuCode"
+    },
+    {
+      "title": "Databases",
+      "tags": ["MongoDB", "MySQL", "Firebase", "PostgreSQL"],
+      "icon": "LuDatabase"
+    },
+
+    {
+      "title": "Tools and Technologies",
+      "tags": ["Git", "Agile/Scrum", "BitBucket", "Vercel"],
+      "icon": "LuCpu"
+    },
+    {
+      "title": "Design",
+      "tags": ["Figma", "Adobe AI"],
+      "icon": "LuPalette"
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Software Development Engineer",
+      "company": "Elekta Oy",
+      "started": "May 2022",
+      "ended": ""
+    },
+
+    {
+      "title": "Frontend Engineer",
+      "company": "Druid Oy",
+      "started": "April 2022",
+      "ended": "May 2022"
+    },
+
+    {
+      "title": "Full Stack Developer",
+      "company": "DroppX",
+      "started": "November 2020",
+      "ended": "Feb 2022"
+    },
+
+    {
+      "title": "Full Stack Developer",
+      "company": "Globuzzer",
+      "started": "September 2020",
+      "ended": "November 2020"
+    }
+  ],
+
+  "tags": [
+    "always learning",
+    "tech enthusiast",
+    "full stack developer",
+    "Problem solver",
+    "clean code"
   ]
 }
