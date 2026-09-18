@@ -14,7 +14,7 @@ const IconLinks = ({ className = "" }: { className?: string }) => {
     const IconComponent = icons[icon];
 
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a href={url} target="_blank" rel="noopener noreferrer" key={url}>
         <Icon className={className} icon={IconComponent} />
       </a>
     );

@@ -4,6 +4,7 @@ import { About } from "./components/about";
 import { Skills } from "./components/skills";
 import { Footer } from "./components/footer";
 import { GetInTouch } from "./components/getInTouch";
+import { ScrollTop } from "./components/scrollTop";
 import styles from "./App.module.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Skills />
         <GetInTouch />
       </div>
+      <ScrollTop />
       <Footer />
     </>
   );

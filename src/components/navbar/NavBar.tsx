@@ -1,27 +1,9 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
+import NavLinks from "../NavLinks";
 import Icon from "../Icon";
 import styles from "./NavBar.module.scss";
-
-const links = [
-  {
-    name: "Home",
-    href: "#home",
-  },
-  {
-    name: "About",
-    href: "#about",
-  },
-  {
-    name: "Skills",
-    href: "#skills",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
-];
 
 function NavBar() {
   const [showSmallMenu, setShowSmallMenu] = useState(false);
@@ -37,12 +19,7 @@ function NavBar() {
 
           <div className={styles.right}>
             <ul className={styles.navList}>
-              {links.map(({ name, href }) => (
-                <li key={name} className={styles.navItem}>
-                  <a href={href}>{name}</a>
-                </li>
-              ))}
-
+              <NavLinks className={styles.navItem} />
               <li className={`${styles.navItem} ${styles.navResume}`}>
                 Resume
               </li>
@@ -64,11 +41,7 @@ function NavBar() {
         className={`${styles.navSmall} ${showSmallMenu ? styles.showMenu : ""}`}
       >
         <ul className={styles.navList}>
-          {links.map(({ name, href }) => (
-            <li key={name} className={styles.navItem}>
-              <a href={href}>{name}</a>
-            </li>
-          ))}
+          <NavLinks className={styles.navItem} />
 
           <li className={`${styles.navItem} ${styles.navResume}`}>Resume</li>
         </ul>

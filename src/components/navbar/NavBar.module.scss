@@ -2,7 +2,10 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   .navBig {
     background: $navBar-background-colour;
     width: 100%;
@@ -38,6 +41,8 @@
 
           a {
             text-decoration: none;
+            color: #fff;
+
             &:visited {
               color: #fff;
             }
@@ -48,15 +53,10 @@
       .left {
         display: flex;
         justify-content: flex-start;
-
-        .navList {
-        }
       }
 
       .right {
         .navList {
-          width: 400px;
-
           .navResume {
             background: $navbar-hover-colour-strong;
             color: $navBar-background-colour;
@@ -67,6 +67,7 @@
           .navIcon {
             font-size: 24px;
             display: none;
+            color: $navbar-hover-colour-strong;
           }
         }
       }
@@ -125,7 +126,7 @@
   .container {
     .navBig {
       .navWrapper {
-        width: 95%;
+        width: 90%;
         .right {
           .navItem:not(:last-child) {
             display: none;

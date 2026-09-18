@@ -34,7 +34,7 @@ const Skills = () => {
           const IconComponent = icons[icon];
 
           return (
-            <div className={styles.gridWrapper}>
+            <div className={styles.gridWrapper} key={title}>
               <div className={styles.skillHeader}>
                 <span>
                   <Icon className={styles.icons} icon={IconComponent} />
@@ -43,8 +43,10 @@ const Skills = () => {
               </div>
 
               <div className={styles.skillBody}>
-                {tags.map((tag) => (
-                  <span className={styles.tags}>{tag}</span>
+                {tags.map((tag, index) => (
+                  <span className={styles.tags} key={index}>
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>

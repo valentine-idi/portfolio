@@ -22,8 +22,14 @@ const Home = () => {
 
         <div className={styles.socials}>
           <div className={styles.buttons}>
-            <div>Get in Touch</div>
-            <div>View Skills</div>
+            <div>
+              <a href="#contact" className={styles.contact}>
+                Get in Touch
+              </a>
+            </div>
+            <div>
+              <a href="#skills">View Skills</a>
+            </div>
           </div>
           <div className={styles.icons}>
             <IconLinks className={styles.socialIcon} />

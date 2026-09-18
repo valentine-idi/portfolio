@@ -31,7 +31,7 @@ const GetInTouch = () => {
             {contacts.map(({ name, value, icon }) => {
               const IconComponent = icons[icon];
               return (
-                <div className={styles.contactGroup}>
+                <div className={styles.contactGroup} key={name}>
                   <div className={styles.contactLeft}>
                     <IconComponent />
                   </div>

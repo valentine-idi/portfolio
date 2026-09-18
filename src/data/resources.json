@@ -1,4 +1,23 @@
 {
+  "navLinks": [
+    {
+      "name": "Home",
+      "href": "#home"
+    },
+    {
+      "name": "About",
+      "href": "#about"
+    },
+    {
+      "name": "Skills",
+      "href": "#skills"
+    },
+    {
+      "name": "Contact",
+      "href": "#contact"
+    }
+  ],
+
   "links": [
     {
       "url": "https://github.com/valentine-idi",
@@ -39,7 +58,7 @@
   "skills": [
     {
       "title": "Programming Languages",
-      "tags": ["Javascript", "Python", "Typescript", "C#", "HTML/CSS"],
+      "tags": ["Javascript", "Python", "Typescript", "C#", "PHP"],
       "icon": "LuTerminal"
     },
     {

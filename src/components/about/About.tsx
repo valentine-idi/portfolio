@@ -21,7 +21,9 @@ const About = () => {
         </div>
         <div className={styles.right}>
           {tags.map((tag) => (
-            <span className={styles.tags}>{tag}</span>
+            <span className={styles.tags} key={tag}>
+              {tag}
+            </span>
           ))}
         </div>
       </div>
@@ -79,8 +81,8 @@ const About = () => {
               </div>
             </div>
 
-            {experience.map((e) => (
-              <div className={styles.listItemContainer}>
+            {experience.map((e, index) => (
+              <div className={styles.listItemContainer} key={index}>
                 <div className={styles.listItemLeft}>
                   <div className={styles.listItemHeader}>{e.title}</div>
 
