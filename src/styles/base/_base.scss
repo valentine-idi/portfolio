@@ -12,7 +12,7 @@
 
 body {
   min-height: 100vh;
-  margin: 0;
+
   color: #fff;
   background-color: #000;
   font-family: "Roboto", sans-serif;
@@ -42,11 +42,21 @@ body {
   background-attachment: fixed;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-
-.social-icon {
 }

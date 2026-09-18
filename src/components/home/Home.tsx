@@ -4,7 +4,7 @@ import styles from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="home">
       <div className={styles.left}>
         <div className={styles.greeting}>Hello! I'm</div>
 

@@ -1,7 +1,7 @@
 import { type IconType } from "react-icons";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
 import { RiPhoneLine } from "react-icons/ri";
-import IconLinks from "../iconLinks";
+import IconLinks from "../IconLinks";
 import { contacts } from "../../data/resources.json";
 import styles from "./GetInTouch.module.scss";
 
@@ -13,7 +13,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <div className={styles.mainHeader}>Get in touch</div>
       <div className={styles.description}>
         Have a question or want to work together? Feel free to drop me a

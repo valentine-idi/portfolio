@@ -1,9 +1,10 @@
 @use "./variables" as *;
 
-@mixin displayFlex {
+@mixin displayFlex($gap: 0) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: $gap;
 }
 
 @mixin flex($gap: 20px) {

@@ -22,7 +22,7 @@ const Skills = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="skills">
       <div className={styles.header}>Skills</div>
       <div className={styles.description}>
         I've worked with a range of technologies in the web development world,

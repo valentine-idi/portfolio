@@ -1,4 +1,4 @@
-import IconLinks from "../iconLinks";
+import IconLinks from "../IconLinks";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {

@@ -2,52 +2,140 @@
 @use "../../styles/abstracts/mixins" as *;
 
 .container {
-  background: $navBar-background-colour;
-  width: 100%;
-  font-size: 14px;
+  position: relative;
+  .navBig {
+    background: $navBar-background-colour;
+    width: 100%;
 
-  padding: 18px 0;
+    .navWrapper {
+      width: 80%;
+      margin: 0 auto;
+      max-width: $max-width;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  .navWrapper {
-    @include displayFlex;
-    margin: 0 auto;
-    width: 80%;
-    max-width: $max-width;
+      .navList {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+        padding: 26px 0;
+        .navLogo {
+          font-size: 30px !important;
+          color: $navbar-hover-colour-strong;
+          font-weight: 800;
+        }
 
-    .navList {
-      @include displayFlex;
-      list-style: none;
+        .navItem {
+          cursor: pointer;
+          font-size: 16px;
+          § &:not(:last-child):hover {
+            color: $navbar-hover-colour;
+            transition: all 0.3s ease-in-out;
+          }
 
-      .navLogo {
-        font-size: 24px;
-        color: $navbar-hover-colour-strong;
-        font-weight: bold;
+          a {
+            text-decoration: none;
+            &:visited {
+              color: #fff;
+            }
+          }
+        }
       }
 
-      .navItem {
-        cursor: pointer;
+      .left {
+        display: flex;
+        justify-content: flex-start;
 
-        &:not(:last-child):hover {
-          color: $navbar-hover-colour;
-          transition: all 0.3s ease-in-out;
+        .navList {
+        }
+      }
+
+      .right {
+        .navList {
+          width: 400px;
+
+          .navResume {
+            background: $navbar-hover-colour-strong;
+            color: $navBar-background-colour;
+            padding: 10px 13px;
+            border-radius: 10px;
+          }
+
+          .navIcon {
+            font-size: 24px;
+            display: none;
+          }
         }
       }
     }
+  }
 
-    .left {
-      .navList {
-      }
+  .navSmall {
+    background: $navBar-background-colour;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+    overflow: hidden;
+
+    transition:
+      max-height 0.5s ease,
+      opacity 0.5s ease,
+      transform 0.5s ease;
+
+    &.showMenu {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 100%;
     }
 
-    .right {
-      .navList {
-        width: 400px;
+    .navList {
+      text-align: center;
 
-        .navResume {
+      .navItem {
+        padding: 16px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        a {
+          text-decoration: none;
+          &:visited {
+            color: #fff;
+          }
+        }
+
+        &.navResume {
           background: $navbar-hover-colour-strong;
           color: $navBar-background-colour;
           padding: 10px 13px;
-          border-radius: 13px;
+          border-radius: 10px;
+          width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    .navBig {
+      .navWrapper {
+        width: 95%;
+        .right {
+          .navItem:not(:last-child) {
+            display: none;
+          }
+
+          .navList {
+            .navIcon {
+              display: block;
+            }
+          }
         }
       }
     }
