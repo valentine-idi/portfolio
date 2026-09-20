@@ -22,6 +22,10 @@
     justify-content: space-between;
     gap: 20px;
 
+    form {
+      width: 100%;
+    }
+
     .left {
       .leftHeader {
         font-size: 20px;
@@ -96,7 +100,7 @@
       @include border;
       border-radius: 10px;
       padding: 20px;
-      flex-basis: 65%;
+      width: 100%;
 
       .inputGroup {
         display: flex;
@@ -105,8 +109,42 @@
         position: relative;
         padding: 20px 0;
 
+        .error {
+          color: #dc2626;
+          font-size: 14px;
+        }
+
+        .success {
+          color: green;
+          font-size: 14px;
+        }
+
+        .errorBorder {
+          border: 2px solid #ff0000;
+        }
+
+        .floatMessage {
+          position: absolute;
+          left: 0px;
+          bottom: 0;
+
+          &:last-child {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+
+        .buttonLoading {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+
         &:first-child {
-          padding-top: 40px;
+          margin-top: 24px;
+        }
+
+        &:not(:first-child) {
+          margin-top: 20px;
         }
 
         .inputRight,
@@ -116,6 +154,10 @@
 
           label {
             top: -26px;
+          }
+
+          .floatMessage {
+            bottom: -18px;
           }
         }
 
@@ -147,9 +189,9 @@
             color: $text-colour-darker;
           }
 
-          &:focus {
-            border: 1px solid #3b82f6;
-          }
+          // &:focus {
+          //   border: 1px solid #3b82f6;
+          // }
         }
 
         label {
