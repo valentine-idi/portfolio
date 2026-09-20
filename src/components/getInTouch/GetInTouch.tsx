@@ -51,6 +51,8 @@ const GetInTouch = () => {
 
       setLoading(false);
       reset();
+
+      setTimeout(() => setMessage(null), 3000);
     } catch (error) {
       setMessage({
         type: "error",
