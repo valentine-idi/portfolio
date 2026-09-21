@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import NavLinks from "../NavLinks";
@@ -8,6 +8,15 @@ import styles from "./NavBar.module.scss";
 
 function NavBar() {
   const [showSmallMenu, setShowSmallMenu] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkSmallScreen = () => setIsSmallScreen(window.innerWidth <= 700);
+
+    window.addEventListener("resize", checkSmallScreen);
+
+    return () => window.removeEventListener("resize", checkSmallScreen);
+  }, []);
   return (
     <div className={styles.container}>
       <nav className={styles.navBig}>
@@ -41,7 +50,7 @@ function NavBar() {
       </nav>
 
       <nav
-        className={`${styles.navSmall} ${showSmallMenu ? styles.showMenu : ""}`}
+        className={`${styles.navSmall} ${showSmallMenu && isSmallScreen ? styles.showMenu : ""}`}
       >
         <ul className={styles.navList}>
           <NavLinks className={styles.navItem} />
