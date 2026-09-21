@@ -165,7 +165,7 @@ const GetInTouch = () => {
               </button>
               {message && (
                 <p
-                  className={`${styles.floatMessage} ${message.type === "error" ? styles.error : styles.success}`}
+                  className={`${styles.buttonMessage} ${message.type === "error" ? styles.error : styles.success}`}
                 >
                   {message.message}
                 </p>

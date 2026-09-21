@@ -10,7 +10,7 @@ export interface Inputs {
 const sendEmail = async (templateParams: Inputs) => {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const publicId = import.meta.env.VITE_EMAILJS_PUBLIC_KE;
 
   console.log("publicId", publicId);
 

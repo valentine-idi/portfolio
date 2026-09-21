@@ -128,10 +128,16 @@
           left: 0px;
           bottom: 0;
 
-          &:last-child {
-            left: 50%;
-            transform: translateX(-50%);
-          }
+          // &:last-child {
+          //   left: 50%;
+          //   transform: translateX(-50%);
+          // }
+        }
+
+        .buttonMessage {
+          @extend .floatMessage;
+          left: 50%;
+          transform: translateX(-50%);
         }
 
         .buttonLoading {
@@ -235,6 +241,20 @@
 
       .right {
         margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 407px) {
+  .container {
+    .flexWrapper {
+      .right {
+        .inputGroup {
+          .floatMessage {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
