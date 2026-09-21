@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import NavLinks from "../NavLinks";
+import resume from "../../assets/pdfs/Valentine_Idi_CV.pdf";
 import Icon from "../Icon";
 import styles from "./NavBar.module.scss";
 
@@ -21,7 +22,9 @@ function NavBar() {
             <ul className={styles.navList}>
               <NavLinks className={styles.navItem} />
               <li className={`${styles.navItem} ${styles.navResume}`}>
-                Resume
+                <a href={resume} download="Valentine_Idi_CV.pdf">
+                  Resume
+                </a>
               </li>
               <li
                 className={`${styles.navItem} ${styles.navBurger}`}
@@ -43,7 +46,11 @@ function NavBar() {
         <ul className={styles.navList}>
           <NavLinks className={styles.navItem} />
 
-          <li className={`${styles.navItem} ${styles.navResume}`}>Resume</li>
+          <li className={`${styles.navItem} ${styles.navResume}`}>
+            <a href={resume} download="Valentine_Idi_CV.pdf">
+              Resume
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
